@@ -81,41 +81,38 @@ namespace ExamenEricJDPC
                 return contador;
                  }
         }
-        //public void ImprimirAscendente()
-        //{
-        //    int longitud= Longitud();
-        //    if (ListaVacia())
-        //    {
-        //        Console.WriteLine("La lista ta vacia");
-        //    }
-        //    else
-        //    {
-        //        for(int i =0; i<longitud;i++ )
-        //        {
-        //            for (int j=0; i<longitud;i++)
-        //            {
-        //                Nodo actual= primero;
-        //                Nodo auxiliar;
-        //                while (actual!=null)
-        //                { 
-        //                    if (longitud<j+1)
-        //                    {
-        //                        auxiliar= actual;
-        //                        j+1=i;
-        //                        actual.Persona.Edad = i;
-                                
-        //                    }
-        //                    actual = actual.Siguiente;}
-        //            }
-        //        }
+        public void ImprimirAscendente()
+        {
+            int longitud = Longitud();
+            if (ListaVacia())
+            {
+                Console.WriteLine("La lista ta vacia");
+            }
+            else
+            {
+                for (int i = 0; i < longitud; i++)
+                {
+                    for (int j = 0; i < longitud; i++)
+                    {
+                        Nodo actual = primero;
 
-        //        while (actual != null)
-        //        {
-        //            Console.WriteLine($"El nombre es {actual.Persona.Nombre} y tiene una edad de {actual.Persona.Edad}");
-        //            actual = actual.Siguiente;
-        //        }
-        //    }
-        //}
+                        while (actual != null)
+                        {
+                            if (actual.Persona.Edad <j+1)
+                            {
+                               actual.Persona.Edad = j+1;
+                               i = j;
+                                actual.Persona.Edad = j;
+
+                            }
+                            actual = actual.Siguiente;
+                        }
+                    }
+                }
+
+              
+            }
+        }
 
         public void Buscar(int edad)
         {

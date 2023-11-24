@@ -12,6 +12,8 @@
             Console.WriteLine("3 Insertar al final");
             Console.WriteLine("4 para Imprimir Lista");
             Console.WriteLine("5 para buscar");
+            Console.WriteLine("6 Imprimir Ascendente");
+
             int opcion =Convert.ToInt32(Console.ReadLine());
 
             while (opcion!=1) 
@@ -41,6 +43,9 @@
                         Console.WriteLine("Ingrese la edad del Perrito(persona) a buscar");
                         int buscador = Convert.ToInt32(Console.ReadLine());
                         listaSencilla.Buscar(buscador); 
+                        break;
+                    case 6:
+                        listaSencilla.ImprimirAscendente();
                         break;
                 }
                 Console.WriteLine("Elije una opcion");
